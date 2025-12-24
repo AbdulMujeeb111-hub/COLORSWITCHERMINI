@@ -17,4 +17,7 @@ body {
 body > div {
     border: 1px dotted white;
     background-color: blue;
+    padding: 10px;
+    color: white;
+    font: monospace;
 }

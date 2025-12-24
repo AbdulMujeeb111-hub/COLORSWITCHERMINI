@@ -20,8 +20,10 @@
         <div class="item10"></div>
         <div class="item11"></div>
         <div class="item12"></div>
+        <p></p>
         <script>
             const body = document.querySelector("body");
+            const colorText = document.querySelector("p");
 
             // for generating random number for the rgb style each time
             function random(number) {
@@ -34,7 +36,11 @@
                     255
                 )})`;
                 e.target.style.backgroundColor = randomColor;
+                e.target.textContent = ` My color output is ${randomColor} `;
             }
+            /*    colorText.textContent = `the tile you pressed now displayed the colour rgb(${random(255)} ${random(255)} ${random(
+                    255
+                ) */
 
             body.addEventListener("click", changeBackgroundColor);
         </script>
