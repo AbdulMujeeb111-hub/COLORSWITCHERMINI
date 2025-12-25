@@ -8,41 +8,194 @@
         <link rel="stylesheet" href="style.css" />
     </head>
     <body>
-        <div class="item1"></div>
-        <div class="item2"></div>
-        <div class="item3"></div>
-        <div class="item4"></div>
-        <div class="item5"></div>
-        <div class="item6"></div>
-        <div class="item7"></div>
-        <div class="item8"></div>
-        <div class="item9"></div>
-        <div class="item10"></div>
-        <div class="item11"></div>
-        <div class="item12"></div>
-        <p></p>
+        <main class="mainbox">
+            <div class="item1 general"></div>
+            <div class="item2 general"></div>
+            <div class="item3 general"></div>
+            <div class="item4 general"></div>
+            <div class="item5 general"></div>
+            <div class="item6 general"></div>
+            <div class="item7 general"></div>
+            <div class="item8 general"></div>
+            <div class="item9 general"></div>
+        </main>
+
+        <section>
+            <p id="selectContainer">
+                <select name="Tile" id="Tileselector">
+                    <option value="Tile1">Tile1</option>
+                    <option value="Tile2">Tile2</option>
+                    <option value="Tile3">Tile3</option>
+                    <option value="Tile4">Tile4</option>
+                    <option value="Tile5">Tile5</option>
+                    <option value="Tile6">Tile6</option>
+                    <option value="Tile7">Tile7</option>
+                    <option value="Tile8">Tile8</option>
+                    <option value="Tile9">Tile9</option>
+                </select>
+
+                <select name="Color" id="Colorselector">
+                    <option value="blue" selected="">Blue</option>
+                    <option value="red">Red</option>
+                    <option value="magenta">Magenta</option>
+                    <option value="green">Green</option>
+                    <option value="pink">Pink</option>
+                    <option value="orange">Orange</option>
+                </select>
+
+                <button id="Clearer">Back to Default</button>
+            </p>
+        </section>
         <script>
-            const body = document.querySelector("body");
-            const colorText = document.querySelector("p");
+            const tileChoose = document.querySelector("#Tileselector");
+            const colorChoose = document.querySelector("#Colorselector");
+            const firstTile = document.querySelector(".item1");
+            const secondTile = document.querySelector(".item2");
+            const thirdTile = document.querySelector(".item3");
+            const fourthTile = document.querySelector(".item4");
+            const fifthTile = document.querySelector(".item5");
+            const sixthTile = document.querySelector(".item6");
+            const seventhTile = document.querySelector(".item7");
+            const eightTile = document.querySelector(".item8");
+            const ninthTile = document.querySelector(".item9");
+            const Clearer = document.querySelector("#Clearer");
 
-            // for generating random number for the rgb style each time
-            function random(number) {
-                return Math.floor(Math.random() * (number + 1));
+            function colorEffector() {
+                const tileValue = tileChoose.value;
+                const cValue = colorChoose.value;
+
+                if (
+                    tileValue === "Tile1" &&
+                    (cValue === "blue" ||
+                        cValue === "red" ||
+                        cValue === "magenta" ||
+                        cValue === "green" ||
+                        cValue === "pink" ||
+                        cValue === "orange")
+                ) {
+                    firstTile.style.backgroundColor = cValue;
+                    firstTile.textContent = `My Color is ${cValue}`;
+                }
+
+                if (
+                    tileValue === "Tile2" &&
+                    (cValue === "blue" ||
+                        cValue === "red" ||
+                        cValue === "magenta" ||
+                        cValue === "green" ||
+                        cValue === "pink" ||
+                        cValue === "orange")
+                ) {
+                    secondTile.style.backgroundColor = cValue;
+                    secondTile.textContent = `My Color is ${cValue}`;
+                }
+
+                if (
+                    tileValue === "Tile3" &&
+                    (cValue === "blue" ||
+                        cValue === "red" ||
+                        cValue === "magenta" ||
+                        cValue === "green" ||
+                        cValue === "pink" ||
+                        cValue === "orange")
+                ) {
+                    thirdTile.style.backgroundColor = cValue;
+                    thirdTile.textContent = `My Color is ${cValue}`;
+                }
+
+                if (
+                    tileValue === "Tile4" &&
+                    (cValue === "blue" ||
+                        cValue === "red" ||
+                        cValue === "magenta" ||
+                        cValue === "green" ||
+                        cValue === "pink" ||
+                        cValue === "orange")
+                ) {
+                    fourthTile.style.backgroundColor = cValue;
+                    fourthTile.textContent = `My Color is ${cValue}`;
+                }
+
+                if (
+                    tileValue === "Tile5" &&
+                    (cValue === "blue" ||
+                        cValue === "red" ||
+                        cValue === "magenta" ||
+                        cValue === "green" ||
+                        cValue === "pink" ||
+                        cValue === "orange")
+                ) {
+                    fifthTile.style.backgroundColor = cValue;
+                    fifthTile.textContent = `My Color is ${cValue}`;
+                }
+
+                if (
+                    tileValue === "Tile6" &&
+                    (cValue === "blue" ||
+                        cValue === "red" ||
+                        cValue === "magenta" ||
+                        cValue === "green" ||
+                        cValue === "pink" ||
+                        cValue === "orange")
+                ) {
+                    sixthTile.style.backgroundColor = cValue;
+                    sixthTile.textContent = `My Color is ${cValue}`;
+                }
+
+                if (
+                    tileValue === "Tile7" &&
+                    (cValue === "blue" ||
+                        cValue === "red" ||
+                        cValue === "magenta" ||
+                        cValue === "green" ||
+                        cValue === "pink" ||
+                        cValue === "orange")
+                ) {
+                    seventhTile.style.backgroundColor = cValue;
+                    seventhTile.textContent = `My Color is ${cValue}`;
+                }
+
+                if (
+                    tileValue === "Tile8" &&
+                    (cValue === "blue" ||
+                        cValue === "red" ||
+                        cValue === "magenta" ||
+                        cValue === "green" ||
+                        cValue === "pink" ||
+                        cValue === "orange")
+                ) {
+                    eightTile.style.backgroundColor = cValue;
+                    eightTile.textContent = `My Color is ${cValue}`;
+                }
+
+                if (
+                    tileValue === "Tile9" &&
+                    (cValue === "blue" ||
+                        cValue === "red" ||
+                        cValue === "magenta" ||
+                        cValue === "green" ||
+                        cValue === "pink" ||
+                        cValue === "orange")
+                ) {
+                    ninthTile.style.backgroundColor = cValue;
+                    ninthTile.textContent = `My Color is ${cValue}`;
+                }
             }
 
-            // to apply that random rgb number
-            function changeBackgroundColor(e) {
-                const randomColor = `rgb(${random(255)} ${random(255)} ${random(
-                    255
-                )})`;
-                e.target.style.backgroundColor = randomColor;
-                e.target.textContent = ` My color output is ${randomColor} `;
-            }
-            /*    colorText.textContent = `the tile you pressed now displayed the colour rgb(${random(255)} ${random(255)} ${random(
-                    255
-                ) */
+            // Calling fxn once on load so that firstTile content will show on DOMContentLoaded
+            colorEffector();
 
-            body.addEventListener("click", changeBackgroundColor);
+            const genTile = document.querySelectorAll(".general");
+            function clearAll() {
+                genTile.forEach(tile => {
+                    tile.style.backgroundColor = "blue";
+                    tile.textContent = "";
+                });
+            }
+
+            tileChoose.addEventListener("change", colorEffector);
+            colorChoose.addEventListener("change", colorEffector);
+            Clearer.addEventListener("click", clearAll);
         </script>
     </body>
 </html>
